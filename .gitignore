@@ -3,7 +3,7 @@
 **/log/
 **/*.log
 
-#.pnp.*
+.pnp.*
 .yarn/*
 #!.yarn/cache
 !.yarn/patches
