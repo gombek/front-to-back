@@ -1,5 +1,7 @@
-/db/
-/.idea/
+dist
+
+/db
+/.idea
 **/log/
 **/*.log
 

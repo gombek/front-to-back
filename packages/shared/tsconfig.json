@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true /* Enable constraints that allow a TypeScript project to be used with project references. */,
+    "lib": [
+      "ES2021",
+      "DOM",
+    ] /* Specify a set of bundled library declaration files that describe the target runtime environment. */,
+    "rootDir": "src" /* Specify the root folder within your source files. */,
+    "declaration": true /* Generate .d.ts files from TypeScript and JavaScript files in your project. */,
+    "declarationMap": true /* Create sourcemaps for d.ts files. */,
+    "sourceMap": true /* Create source map files for emitted JavaScript files. */,
+    "outDir": "dist" /* Specify an output folder for all emitted files. */
+  },
+  "include": ["src/**/*"],
+  "exclude": ["**/*.spec.*", "**/*.test.*"]
+}

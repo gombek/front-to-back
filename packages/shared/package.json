@@ -1,0 +1,12 @@
+{
+  "name": "shared",
+  "packageManager": "yarn@3.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "scripts": {
+    "build": "tsc --build",
+    "lint": "eslint \"src/**\"",
+    "lint:fix": "eslint \"src/**\" --fix",
+    "test": "jest"
+  }
+}
