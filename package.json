@@ -8,10 +8,10 @@
     "shared": "yarn workspace shared",
     "server": "yarn workspace server",
     "web-client": "yarn workspace web-client",
-    "build": "yarn workspaces foreach run build",
     "start": "yarn workspace server start",
-    "lint": "yarn workspaces foreach run lint",
-    "test": "yarn workspaces foreach run test"
+    "build-all": "yarn workspaces foreach run build",
+    "lint-all": "yarn workspaces foreach run lint",
+    "test-all": "yarn workspaces foreach run test"
   },
   "packageManager": "yarn@3.1.0",
   "devDependencies": {
