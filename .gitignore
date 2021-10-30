@@ -5,6 +5,8 @@ dist
 **/log/
 **/*.log
 
+node_modules
+
 .pnp.*
 .yarn/*
 #!.yarn/cache
