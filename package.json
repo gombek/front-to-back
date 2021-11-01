@@ -9,9 +9,9 @@
     "server": "pnpm workspace server",
     "web-client": "pnpm workspace web-client",
     "start": "pnpm workspace server start",
-    "build-all": "pnpm recursive run build",
-    "lint-all": "pnpm recursive run lint",
-    "test-all": "pnpm recursive run test"
+    "build": "pnpm recursive run build",
+    "lint": "pnpm recursive run lint",
+    "test": "pnpm recursive run test"
   },
   "devDependencies": {
     "@types/jest": "^27.0.2",
