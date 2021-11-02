@@ -4,6 +4,7 @@ dist
 /.idea
 **/log/
 **/*.log
+*.tsbuildinfo
 
 node_modules
 

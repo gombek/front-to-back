@@ -1,13 +1,12 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-     "rootDir": "src",
-     "sourceMap": true,
-     "outDir": "dist"
+    "rootDir": "src",
+    "sourceMap": true,
+    "outDir": "dist",
+    "target": "es6"
   },
   "include": ["src"],
   "exclude": ["**/*.spec.*", "**/*.test.*"],
-  "references": [
-    {"path": "../shared"}
-  ]
+  "references": [{ "path": "../shared" }]
 }
