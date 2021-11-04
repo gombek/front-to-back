@@ -3,7 +3,7 @@
   "compilerOptions": {
     "rootDir": "src",
     "sourceMap": true,
-    "outDir": "dist",
+    "outDir": "build",
     "target": "es6"
   },
   "include": ["src"],

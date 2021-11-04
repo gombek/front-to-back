@@ -1,10 +1,9 @@
 {
   "name": "server",
-  "packageManager": "yarn@3.1.0",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc --build",
-    "start": "node dist/index.js",
+    "build": "webpack",
+    "dev": "ts-node-dev --respawn src/index.ts",
     "lint": "eslint \"src/**\"",
     "lint:fix": "eslint \"src/**\" --fix",
     "test": "jest"

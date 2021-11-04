@@ -22,6 +22,13 @@
       "problemMatcher": [],
       "label": "npm: test",
       "detail": "pnpm recursive run test"
+    },
+    {
+      "type": "npm",
+      "script": "start",
+      "problemMatcher": [],
+      "label": "npm: start",
+      "detail": "node dist/index.js --trace-warnings"
     }
   ]
 }
