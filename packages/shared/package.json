@@ -1,6 +1,7 @@
 {
   "name": "shared",
-  "main": "src/index.ts",
+  "license": "ecl-2.0",
+  "main": "dist/index.js",
   "types": "dist/index.d.js",
   "publishConfig": {
     "main": "dist/index.js",
@@ -8,6 +9,7 @@
   },
   "scripts": {
     "build": "tsc --build",
+    "dev": "tsc --watch",
     "lint": "eslint \"src/**\"",
     "lint:fix": "eslint \"src/**\" --fix",
     "test": "jest"

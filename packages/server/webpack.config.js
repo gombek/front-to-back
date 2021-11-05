@@ -8,6 +8,7 @@ module.exports = Object.assign({}, base, {
     filename: "index.js",
     path: path.resolve(__dirname, "../../dist"),
   },
+  context: path.resolve(__dirname),
   node: {
     global: false,
     __filename: false,

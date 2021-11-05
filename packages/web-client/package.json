@@ -1,8 +1,9 @@
 {
   "name": "web-client",
-  "main": "dist/index.js",
+  "license": "ecl-2.0",
   "scripts": {
-    "build": "tsc --build",
+    "build": "webpack --env prod",
+    "dev": "webpack serve",
     "lint": "eslint \"src/**\"",
     "lint:fix": "eslint \"src/**\" --fix",
     "test": "jest"
