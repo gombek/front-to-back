@@ -3,7 +3,7 @@ const base = require("../../webpack.config");
 
 module.exports = Object.assign({}, base, {
   target: "node",
-  mode: "production",
+  mode: "development",
   output: {
     filename: "index.js",
     path: path.resolve(__dirname, "../../dist"),

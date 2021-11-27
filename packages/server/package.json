@@ -1,18 +1,21 @@
 {
   "name": "server",
-  "license": "ecl-2.0",
+  "private": true,
+  "license": "UNLICENSED",
   "scripts": {
     "build": "webpack",
-    "dev": "ts-node-dev --respawn src/index.ts",
+    "dev": "ts-node-dev --respawn --trace-warnings -- src/index.ts",
     "lint": "eslint \"src/**\"",
     "lint:fix": "eslint \"src/**\" --fix",
     "test": "jest"
   },
   "dependencies": {
+    "@graphql-tools/schema": "^8.3.1",
+    "@graphql-tools/mock": "^8.4.4",
     "apollo-server-core": "^3.4.0",
     "apollo-server-express": "^3.4.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "graphql": "^15",
     "shared": "workspace:*"
   },
   "devDependencies": {

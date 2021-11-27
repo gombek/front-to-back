@@ -1,6 +1,8 @@
 dist/
 build/
 
+.env
+
 /db
 /.idea
 **/log/

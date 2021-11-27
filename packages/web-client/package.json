@@ -1,6 +1,7 @@
 {
   "name": "web-client",
-  "license": "ecl-2.0",
+  "private": true,
+  "license": "UNLICENSED",
   "scripts": {
     "build": "webpack --env prod",
     "dev": "webpack serve",

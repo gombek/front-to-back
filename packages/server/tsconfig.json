@@ -4,7 +4,8 @@
     "rootDir": "src",
     "sourceMap": true,
     "outDir": "build",
-    "target": "es6"
+    "target": "es6",
+    "module": "CommonJS"
   },
   "include": ["src"],
   "exclude": ["**/*.spec.*", "**/*.test.*"],

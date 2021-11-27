@@ -12,8 +12,10 @@ importers:
       eslint-plugin-react: ^7.26.1
       eslint-plugin-react-hooks: ^4.2.0
       eslint-plugin-workspaces: ^0.7.0
+      graphql: ^15
       html-webpack-plugin: ^5.5.0
       jest: ^27.3.1
+      rimraf: ^3.0.2
       stylelint: ^14.0.1
       ts-jest: ^27.0.7
       ts-loader: ^9.2.6
@@ -21,6 +23,8 @@ importers:
       webpack: ^5.61.0
       webpack-cli: ^4.9.1
       webpack-dev-server: ^4.4.0
+    dependencies:
+      graphql: 15.7.2
     devDependencies:
       '@types/jest': 27.0.2
       '@typescript-eslint/eslint-plugin': 5.2.0_61d834be236e22b473474e20e53cb311
@@ -32,6 +36,7 @@ importers:
       eslint-plugin-workspaces: 0.7.0
       html-webpack-plugin: 5.5.0_webpack@5.61.0
       jest: 27.3.1
+      rimraf: 3.0.2
       stylelint: 14.0.1
       ts-jest: 27.0.7_2c4ca6574207836d1023f54689cc81ac
       ts-loader: 9.2.6_typescript@4.4.4+webpack@5.61.0
@@ -42,19 +47,23 @@ importers:
 
   packages/server:
     specifiers:
+      '@graphql-tools/mock': ^8.4.4
+      '@graphql-tools/schema': ^8.3.1
       '@types/express': ^4.17.13
       '@types/node': ^16.11.6
       apollo-server-core: ^3.4.0
       apollo-server-express: ^3.4.0
+      dotenv: ^10.0.0
       express: ^4.17.1
-      graphql: ^15
       shared: workspace:*
       ts-node-dev: ^1.1.8
     dependencies:
+      '@graphql-tools/mock': 8.4.4_graphql@15.7.2
+      '@graphql-tools/schema': 8.3.1_graphql@15.7.2
       apollo-server-core: 3.4.0_graphql@15.7.2
       apollo-server-express: 3.4.0_express@4.17.1+graphql@15.7.2
+      dotenv: 10.0.0
       express: 4.17.1
-      graphql: 15.7.2
       shared: link:../shared
     devDependencies:
       '@types/express': 4.17.13
@@ -479,8 +488,8 @@ packages:
       tslib: 2.3.1
     dev: false
 
-  /@graphql-tools/mock/8.4.2_graphql@15.7.2:
-    resolution: {integrity: sha512-2v4v99mWUB1by+6Bk01PoJCUVnYoNSOT0E5VvFRf5oMwJPaRKLAbC+IjZaRoen1tWpVrg+3Coub7co8jyhvm/Q==}
+  /@graphql-tools/mock/8.4.4_graphql@15.7.2:
+    resolution: {integrity: sha512-lRdU6XaKxZk7qv4G+1IhbVF7gvb3AaOQUC3Xx1M0/1/fRwt+zcUOWzgC/LNjxAIOI2T8Eh9eqKyQXBIWbTA02Q==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
@@ -1462,7 +1471,7 @@ packages:
     dependencies:
       '@apollographql/apollo-tools': 0.5.2
       '@apollographql/graphql-playground-html': 1.6.29
-      '@graphql-tools/mock': 8.4.2_graphql@15.7.2
+      '@graphql-tools/mock': 8.4.4_graphql@15.7.2
       '@graphql-tools/schema': 8.3.1_graphql@15.7.2
       '@graphql-tools/utils': 8.5.1_graphql@15.7.2
       '@josephg/resolvable': 1.0.1
@@ -2347,6 +2356,11 @@ packages:
       no-case: 3.0.4
       tslib: 2.3.1
     dev: true
+
+  /dotenv/10.0.0:
+    resolution: {integrity: sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==}
+    engines: {node: '>=10'}
+    dev: false
 
   /dynamic-dedupe/0.3.0:
     resolution: {integrity: sha1-BuRMIj9eTpTXjvnbI6ZRXOL5YqE=}

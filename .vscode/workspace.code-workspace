@@ -1,0 +1,42 @@
+{
+	"folders": [
+		{
+			"name": "✨ pmt",
+			"path": ".."
+		},
+		{
+			"name": "🚀server",
+			"path": "..\\packages\\server"
+		},
+		{
+			"name": "📦 shared",
+			"path": "..\\packages\\shared"
+		},
+		{
+			"name": "🎨web-client",
+			"path": "..\\packages\\web-client"
+		}
+	],
+	"settings": {
+		"typescript.tsdk": ".yarn/sdks/typescript/lib",
+		"typescript.enablePromptUseWorkspaceTsdk": true,
+		"stylelint.stylelintPath": ".yarn/sdks/stylelint/lib/index.js",
+		"colorTabs.config": [
+
+
+			{
+				"regex": ".*client|web|frontend.*",
+				"color": "#ffbb77"
+			},
+			{
+				"regex": ".*server|api|backend.*",
+				"color": "#ff99bb"
+			},
+			{
+				"regex": ".*shared|common|lib.*",
+				"color": "#88aa88"
+			}
+		],
+		"npm.packageManager": "pnpm"
+	}
+}
