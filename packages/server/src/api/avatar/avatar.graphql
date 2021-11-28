@@ -1,0 +1,8 @@
+type Avatar {
+  id: ID!
+  src: String
+}
+
+type Query {
+  avatar: Avatar
+}

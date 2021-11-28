@@ -1,22 +1,13 @@
 import "./setEnvConfig";
-import { makeExecutableSchema } from "@graphql-tools/schema";
-import { ApolloServer, gql } from "apollo-server-express";
-import { ApolloServerPluginDrainHttpServer, Config } from "apollo-server-core";
 import express from "express";
 import http from "http";
 import path from "path";
-
-import { query } from "./api/query";
-import { organizationDef } from "./api/organization/schema";
-import { organizationRes } from "./api/organization/resolvers";
 import { GraphQLSchema } from "graphql";
+import { ApolloServer } from "apollo-server-express";
+import { ApolloServerPluginDrainHttpServer, Config } from "apollo-server-core";
+import { schema } from "./api/schema";
 
 const PORT = process.env.PORT;
-
-const schema: GraphQLSchema = makeExecutableSchema({
-  typeDefs: [query, organizationDef],
-  resolvers: [organizationRes],
-});
 
 async function startApolloServer({ schema }: { schema: GraphQLSchema }) {
   const app = express();
@@ -45,4 +36,4 @@ async function startApolloServer({ schema }: { schema: GraphQLSchema }) {
   );
 }
 
-startApolloServer({ schema: schema });
+startApolloServer({ schema });

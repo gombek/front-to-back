@@ -1,0 +1,1 @@
+documents: "packages/server/src/api/**/*.graphql"

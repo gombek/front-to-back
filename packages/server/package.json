@@ -4,14 +4,16 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "webpack",
-    "dev": "ts-node-dev --respawn --trace-warnings -- src/index.ts",
+    "dev": "ts-node-dev --respawn --trace-warnings --rs --watch src/**/*.graphql -- src/index.ts",
     "lint": "eslint \"src/**\"",
     "lint:fix": "eslint \"src/**\" --fix",
     "test": "jest"
   },
   "dependencies": {
-    "@graphql-tools/schema": "^8.3.1",
+    "@graphql-tools/load-files": "^6.5.2",
+    "@graphql-tools/merge": "^8.2.1",
     "@graphql-tools/mock": "^8.4.4",
+    "@graphql-tools/schema": "^8.3.1",
     "apollo-server-core": "^3.4.0",
     "apollo-server-express": "^3.4.0",
     "dotenv": "^10.0.0",

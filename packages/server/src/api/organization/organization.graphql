@@ -1,0 +1,12 @@
+type Organization {
+  id: ID!
+  name: String!
+  description: String
+  avatar: Avatar
+  users: [User]!
+}
+
+type Query {
+  organization: Organization
+  organizations: [Organization]!
+}
