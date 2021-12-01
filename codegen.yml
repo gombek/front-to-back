@@ -1,0 +1,20 @@
+schema: "packages/server/src/api/**/*.graphql"
+# documents: "packages/server/src/api/**/*.ts"
+generates:
+  # packages/shared/src/types/api-types.ts:
+  # - typescript
+  packages/shared/src/types/api-types.ts:
+    config:
+      useIndexSignature: true
+      defaultMapper: Partial<{T}>
+    plugins:
+      - typescript
+      - typescript-resolvers
+  # packages/shared/src/types/:
+  #   preset: near-operation-file
+  #   presetConfig:
+  #     extension: .generated.tsx
+  #     baseTypesPath: api-types.ts
+  #   plugins:
+  #     - typescript-operations
+  #     - typescript-react-apollo

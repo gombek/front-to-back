@@ -4,5 +4,5 @@ type Avatar {
 }
 
 type Query {
-  avatar: Avatar
+  avatar(id: ID!): Avatar
 }

@@ -2,10 +2,10 @@
   "name": "shared",
   "private": true,
   "license": "UNLICENSED",
-  "main": "dist/index.js",
-  "types": "dist/index.d.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "publishConfig": {
-    "main": "dist/index.js",
+    "main": "lib/index.js",
     "typings": "lib/index.d.ts"
   },
   "scripts": {

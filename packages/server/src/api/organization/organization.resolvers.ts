@@ -1,8 +1,9 @@
-import { organization, organizations } from "../../mocks/fixtures";
+import { Resolvers } from "shared/src/types/api-types";
+import { organization, organizations, avatar } from "../../mocks/fixtures";
 
-export const resolvers = {
+export const resolvers: Resolvers = {
   Query: {
-    organization: (id: string) => organization,
-    organizations: (id: [string]) => organizations,
+    organization: (id) => organization,
+    organizations: (ids) => organizations,
   },
 };
