@@ -7,8 +7,13 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: "ts-loader",
         exclude: /node_modules/,
+        use: "ts-loader",
+      },
+      {
+        test: /\.graphql$/,
+        exclude: /node_modules/,
+        loader: "graphql-tag/loader",
       },
     ],
   },

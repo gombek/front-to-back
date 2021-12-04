@@ -1,12 +1,16 @@
-import { user, users, avatar } from "../../mocks/fixtures";
+import { Resolvers } from "shared/lib/types/generated/api-types";
+import { users, avatars } from "../../mocks/fixtures";
 
-export const resolvers = {
+export const resolvers: Resolvers = {
   Query: {
-    user: (id: string) => user,
-    users: (id: [string]) => users,
+    user: (parent, args, context, info) =>
+      users.find(({ id }) => id === args.id) || null,
+    users: (parent, args, context, info) =>
+      users.filter(({ id }) => args.ids.includes(id)),
   },
 
   User: {
-    avatar: () => avatar,
+    avatar: (parent, args, context, info) =>
+      avatars.find(({ id }) => id === parent.avatar) || null,
   },
 };

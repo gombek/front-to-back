@@ -3,6 +3,8 @@ export const avatar = {
   src: "avatar.png",
 };
 
+export const avatars = [avatar];
+
 export const organization = {
   id: "organization.1",
   name: "Lorem ltd.",

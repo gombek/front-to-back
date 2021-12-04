@@ -10,6 +10,7 @@
     "sourceMap": true,
     "outDir": "build"
   },
+  "types": ["../shared/lib/types"],
   "include": ["src"],
   "exclude": ["**/*.spec.*", "**/*.test.*"],
   "references": [{ "path": "../shared" }]

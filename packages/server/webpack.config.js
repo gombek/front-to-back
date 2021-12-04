@@ -3,7 +3,7 @@ const base = require("../../webpack.config");
 
 module.exports = Object.assign({}, base, {
   target: "node",
-  mode: "development",
+  mode: "production",
   output: {
     filename: "index.js",
     path: path.resolve(__dirname, "../../dist"),
@@ -13,5 +13,8 @@ module.exports = Object.assign({}, base, {
     global: false,
     __filename: false,
     __dirname: false,
+  },
+  externals: {
+    "graphql-import-node": {},
   },
 });

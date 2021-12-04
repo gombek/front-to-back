@@ -3,10 +3,13 @@ schema: "packages/server/src/api/**/*.graphql"
 generates:
   # packages/shared/src/types/api-types.ts:
   # - typescript
-  packages/shared/src/types/api-types.ts:
+  packages/shared/src/types/generated/api-types.ts:
     config:
       useIndexSignature: true
       defaultMapper: Partial<{T}>
+      mappers:
+        User: ../model#UserModel
+        Avatar: ../model#AvatarModel
     plugins:
       - typescript
       - typescript-resolvers

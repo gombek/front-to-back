@@ -1,4 +1,5 @@
 import { GraphQLResolveInfo } from 'graphql';
+import { UserModel, AvatarModel } from '../model';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -50,6 +51,16 @@ export type QueryOrganizationArgs = {
 
 
 export type QueryOrganizationsArgs = {
+  ids: Array<Scalars['ID']>;
+};
+
+
+export type QueryUserArgs = {
+  id: Scalars['ID'];
+};
+
+
+export type QueryUsersArgs = {
   ids: Array<Scalars['ID']>;
 };
 
@@ -132,24 +143,24 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 
 /** Mapping between all available schema types and the resolvers types */
 export type ResolversTypes = ResolversObject<{
-  Avatar: ResolverTypeWrapper<Partial<Avatar>>;
+  Avatar: ResolverTypeWrapper<AvatarModel>;
   Boolean: ResolverTypeWrapper<Partial<Scalars['Boolean']>>;
   ID: ResolverTypeWrapper<Partial<Scalars['ID']>>;
   Organization: ResolverTypeWrapper<Partial<Organization>>;
   Query: ResolverTypeWrapper<{}>;
   String: ResolverTypeWrapper<Partial<Scalars['String']>>;
-  User: ResolverTypeWrapper<Partial<User>>;
+  User: ResolverTypeWrapper<UserModel>;
 }>;
 
 /** Mapping between all available schema types and the resolvers parents */
 export type ResolversParentTypes = ResolversObject<{
-  Avatar: Partial<Avatar>;
+  Avatar: AvatarModel;
   Boolean: Partial<Scalars['Boolean']>;
   ID: Partial<Scalars['ID']>;
   Organization: Partial<Organization>;
   Query: {};
   String: Partial<Scalars['String']>;
-  User: Partial<User>;
+  User: UserModel;
 }>;
 
 export type AvatarResolvers<ContextType = any, ParentType extends ResolversParentTypes['Avatar'] = ResolversParentTypes['Avatar']> = ResolversObject<{
@@ -171,8 +182,8 @@ export type QueryResolvers<ContextType = any, ParentType extends ResolversParent
   avatar?: Resolver<Maybe<ResolversTypes['Avatar']>, ParentType, ContextType, RequireFields<QueryAvatarArgs, 'id'>>;
   organization?: Resolver<Maybe<ResolversTypes['Organization']>, ParentType, ContextType, RequireFields<QueryOrganizationArgs, 'id'>>;
   organizations?: Resolver<Array<ResolversTypes['Organization']>, ParentType, ContextType, RequireFields<QueryOrganizationsArgs, 'ids'>>;
-  user?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>;
-  users?: Resolver<Array<Maybe<ResolversTypes['User']>>, ParentType, ContextType>;
+  user?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType, RequireFields<QueryUserArgs, 'id'>>;
+  users?: Resolver<Array<Maybe<ResolversTypes['User']>>, ParentType, ContextType, RequireFields<QueryUsersArgs, 'ids'>>;
 }>;
 
 export type UserResolvers<ContextType = any, ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']> = ResolversObject<{

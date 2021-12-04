@@ -13,6 +13,7 @@
     "sourceMap": true /* Create source map files for emitted JavaScript files. */,
     "outDir": "lib" /* Specify an output folder for all emitted files. */
   },
+  "types": ["./src/types"],
   "include": ["src/**/*"],
   "exclude": ["**/*.spec.*", "**/*.test.*"]
 }
