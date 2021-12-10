@@ -5,7 +5,7 @@
       "ES2021",
       "DOM"
     ] /* Specify a set of bundled library declaration files that describe the target runtime environment. */,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "rootDir": "src",
     "sourceMap": true,
     "outDir": "build"

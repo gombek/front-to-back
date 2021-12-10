@@ -10,7 +10,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "@graphql-tools/load-files": "^6.5.2",
     "@graphql-tools/merge": "^8.2.1",
     "@graphql-tools/mock": "^8.4.4",
     "@graphql-tools/schema": "^8.3.1",

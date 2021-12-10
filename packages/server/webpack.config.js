@@ -5,7 +5,7 @@ module.exports = Object.assign({}, base, {
   target: "node",
   mode: "production",
   output: {
-    filename: "index.js",
+    filename: "start-server.js",
     path: path.resolve(__dirname, "../../dist"),
   },
   context: path.resolve(__dirname),
