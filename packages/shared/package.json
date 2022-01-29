@@ -1,14 +1,11 @@
 {
-  "name": "shared",
+  "name": "@piechowj/pmt-types",
   "private": true,
   "license": "UNLICENSED",
-  "main": "src/index.ts",
-  "publishConfig": {
-    "main": "lib/index.js",
-    "types": "lib/index.d.ts"
-  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "build": "tsc --build",
+    "build": "tsc --build --clean & tsc --build",
     "dev": "tsc --watch",
     "lint": "eslint \"src/**\"",
     "lint:fix": "eslint \"src/**\" --fix",

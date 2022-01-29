@@ -5,10 +5,13 @@
     "sourceMap": true,
     "outDir": "build",
     "target": "es6",
-    "module": "CommonJS"
+    "module": "CommonJS",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/@piechowj/pmt-types/lib/types"
+    ]
   },
-  "types": ["../shared/lib/types"],
   "include": ["src"],
   "exclude": ["**/*.spec.*", "**/*.test.*"],
-  "references": [{ "path": "../shared" }]
+  "references": [{ "path": "../shared/" }]
 }

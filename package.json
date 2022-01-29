@@ -6,8 +6,8 @@
   ],
   "license": "UNLICENSED",
   "scripts": {
-    "start": "node dist/index.js",
-    "build": "pnpm recursive run build",
+    "start": "node dist/start-server.js",
+    "build": "pnpm recursive run build --sort=true --workspace-concurrency=1",
     "lint": "pnpm recursive run lint",
     "test": "pnpm recursive run test",
     "clean": "rimraf dist/*",

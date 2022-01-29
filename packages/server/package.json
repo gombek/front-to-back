@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "@piechowj/pmt-server",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
@@ -17,12 +17,12 @@
     "apollo-server-express": "^3.4.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "graphql-import-node": "^0.0.4",
-    "shared": "workspace:*"
+    "graphql-import-node": "^0.0.4"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/node": "^16.11.6",
+    "@piechowj/pmt-types": "workspace:*",
     "ts-node-dev": "^1.1.8"
   }
 }

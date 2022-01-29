@@ -1,4 +1,4 @@
-import { Resolvers } from "shared/lib/types/generated/api-types";
+import { Resolvers } from "@piechowj/pmt-types/lib/generated/api-types";
 import { organization, organizations, avatar } from "../../mocks/fixtures";
 
 export const resolvers: Resolvers = {

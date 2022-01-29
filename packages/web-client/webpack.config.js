@@ -23,6 +23,7 @@ module.exports = (env) =>
     devServer: {
       proxy: {
         "/graphql": "http://localhost:3000/graphql",
+        ws: true,
       },
       compress: true,
       port: 8080,

@@ -1,8 +1,8 @@
 import "./setEnvConfig";
 import "./setup";
 import express from "express";
-import http from "http";
-import path from "path";
+import { createServer } from "http";
+import { join } from "path";
 import { GraphQLSchema } from "graphql";
 import { ApolloServer } from "apollo-server-express";
 import { ApolloServerPluginDrainHttpServer, Config } from "apollo-server-core";
@@ -12,9 +12,9 @@ const PORT = process.env.PORT;
 
 async function startApolloServer({ schema }: { schema: GraphQLSchema }) {
   const app = express();
-  app.use(express.static(path.join(__dirname, "public")));
+  app.use(express.static(join(__dirname, "public")));
 
-  const httpServer = http.createServer(app);
+  const httpServer = createServer(app);
   const server = new ApolloServer({
     schema: schema,
     plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
