@@ -1,14 +1,8 @@
-import { gql, useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
+import Fab from "@mui/material/Fab";
+import Icon from "@mui/material/Icon";
 import { Providers } from "../Providers/Providers";
 import GetUser from "../../api/user/getUser.graphql";
-
-// const GET_USER = gql`
-//   query GetUser {
-//     user(id: "user.1") {
-//       name
-//     }
-//   }
-// `;
 
 export const App = () => {
   return (
@@ -23,6 +17,9 @@ const User = () => {
   const { loading, error, data } = useQuery(GetUser);
   return (
     <>
+      <Fab color="primary" aria-label="add">
+        <Icon>Add</Icon>
+      </Fab>
       <div>user</div>
       {JSON.stringify(loading)}
       {JSON.stringify(error)}

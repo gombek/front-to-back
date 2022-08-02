@@ -33,7 +33,8 @@ async function startApolloServer({ schema }: { schema: GraphQLSchema }) {
   );
 
   console.log(
-    `🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`
+    `🚀 Web Client ready at http://localhost:${PORT}\n`,
+    `🚀 GraphQL ready at http://localhost:${PORT}${server.graphqlPath}`
   );
 }
 
